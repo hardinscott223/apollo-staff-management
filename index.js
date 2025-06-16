@@ -1,17 +1,67 @@
-const express = require('express');
-const mongoose = require('mongoose');
+const express = require("express");
+const mongoose = require("mongoose");
+const port = 4000;
 
 const app = express();
+app.set("view engine", "ejs");
+app.set("views", "./views");
+app.use(express.static("public"));
 
-let mongoURL = "mongodb+srv://arkarphyo:test1234@cluster0.44naqvx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+let mongoURL =
+  "mongodb+srv://arkarphyo:test1234@cluster0.44naqvx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-mongoose.connect(mongoURL).then(() =>{
-    console.log('DB is connected');
-    app.listen(port, ()=>{
-        console.log("Server is connecting at port 3000");
+mongoose
+  .connect(mongoURL)
+  .then(() => {
+    console.log("DB is connected");
+    serverStart();
+  })
+  .catch((err) => {
+    console.error("MongoDB connection error:", err);
+  });
+
+function serverStart() {
+  app
+    .listen(port, () => {
+      console.log(`Server started on port ${port}`);
     })
-}).catch(e => {
-    console.log(e);
-})
+    .on("error", (err) => {
+      console.error("Server error:", err);
+    });
+}
 
-const port = 3000;
+app.get("/", (req, res) => {
+  res.render("dashboard", {
+    title: "Dashboard",
+  });
+});
+app.get("/department", (req, res) => {
+  res.render("department", {
+    title: "Department",
+  });
+});
+app.get("/department/create", (req, res) => {
+  res.render("departmentcreate", {
+    title: "Department",
+  });
+});
+app.get("/employee", (req, res) => {
+  res.render("employee", {
+    title: "Employee",
+  });
+});
+
+app.get("/profile", (req, res) => {
+  res.render("profile", {
+    title: "Profile",
+  });
+});
+
+app.use((req, res) => {
+  res.status(404).render("404");
+});
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).render("500");
+});
