@@ -5,20 +5,21 @@
   overflow: hidden;
 }
 a {
-  color: white;
   text-decoration: none;
 }
 nav {
-  background-color: #52b69a;
+  background-color: #6ab9ff;
   height: 50px;
   padding: 10px;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 18px;
 }
 
 footer {
-  background-color: #52b69a;
+  background-color: #6ab9ff;
   align-items: center;
   color: #777;
   text-align: center;
@@ -46,7 +47,7 @@ ul {
   padding: 0px;
 }
 ul li {
-  color: white;
+  color: #fff;
   padding: 20px;
   list-style: none;
   height: 50px;
