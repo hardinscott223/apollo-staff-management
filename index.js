@@ -1,10 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const expressLayouts = require("express-ejs-layouts");
 const port = 4000;
 
 const app = express();
+app.use(expressLayouts);
 app.set("view engine", "ejs");
 app.set("views", "./views");
+app.set("layout", "layouts/default");
 app.use(express.static("public"));
 
 let mongoURL =
@@ -47,6 +50,11 @@ app.get("/department/create", (req, res) => {
 });
 app.get("/employee", (req, res) => {
   res.render("employee", {
+    title: "Employee",
+  });
+});
+app.get("/employee/create", (req, res) => {
+  res.render("employeecreate", {
     title: "Employee",
   });
 });

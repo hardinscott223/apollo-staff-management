@@ -1,29 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <%- include("./partials/header.ejs") %>
-  </head>
-  <body>
-    <%- include("./partials/nav.ejs") %>
-    <div class="main-container">
-      <%- include("./partials/sidebar.ejs") %>
-
-      <main class="content">
-        <h1>Your Department list Here</h1>
-        <a href="/department" style="color: black">Back</a>
-        <form action="" method="POST">
-          <div>
-            <label for="department">Department Name</label>
-            <input type="text" id="department" />
-          </div>
-          <div>
-            <label for="description">Description</label>
-            <textarea name="" id="description"></textarea>
-          </div>
-          <button type="submit">Register</button>
-        </form>
-      </main>
-    </div>
-    <%- include("./partials/footer.ejs") %>
-  </body>
-</html>
+<h1>Your Department list Here</h1>
+<a href="/department" style="color: black">Back</a>
+<form action="" method="POST">
+  <div>
+    <label for="department">Department Name</label>
+    <input type="text" id="department" />
+  </div>
+  <div>
+    <label for="description">Description</label>
+    <textarea name="" id="description"></textarea>
+  </div>
+  <button type="submit">Register</button>
+</form>

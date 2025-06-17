@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Apolio || <%= title %></title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <nav>
+          <a href="/">logo</a>
+          <div>
+            <a href="">Image</a>
+            <a href="/profile">profile</a>
+            <a href="">Setting</a>
+          </div>
+        </nav>
+      </div>
+      <div class="main-container">
+        <div class="sidebar">
+          <ul>
+            <li>
+              <a href="/">Dashboard</a>
+            </li>
+            <li>
+              <a href="/department">Department</a>
+            </li>
+            <li>
+              <a href="/employee">Employee</a>
+            </li>
+          </ul>
+        </div>
+
+        <main class="content"><%-body%></main>
+      </div>
+      <footer>Copyright &copy; ArkarPhyo 2025</footer>
+    </div>
+  </body>
+</html>
