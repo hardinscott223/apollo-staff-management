@@ -8,18 +8,10 @@
   </head>
   <body>
     <div class="container">
-      <div>
-        <nav>
-          <a href="/">logo</a>
-          <div>
-            <a href="">Image</a>
-            <a href="/profile">profile</a>
-            <a href="">Setting</a>
-          </div>
-        </nav>
-      </div>
       <div class="main-container">
         <div class="sidebar">
+          <a href="/">logo</a>
+          <div class="sidebar-line"></div>
           <ul>
             <li>
               <a href="/">Dashboard</a>
@@ -31,9 +23,36 @@
               <a href="/employee">Employee</a>
             </li>
           </ul>
+          <div class="contact">
+            <div>
+              <div>
+                <a href="">icon</a>
+              </div>
+              <div>
+                <span>test</span>
+              </div>
+              <div>
+                <span>test</span>
+              </div>
+              <button>Test</button>
+            </div>
+          </div>
         </div>
 
-        <main class="content"><%-body%></main>
+        <main class="content">
+          <div>
+            <nav>
+              <a href="/">logo</a>
+              <div>
+                <a href="">Image</a>
+                <a href="/profile">profile</a>
+                <a href="">Setting</a>
+              </div>
+            </nav>
+          </div>
+
+          <%-body%>
+        </main>
       </div>
       <footer>Copyright &copy; ArkarPhyo 2025</footer>
     </div>
