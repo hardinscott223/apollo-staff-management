@@ -10,26 +10,29 @@ app.set("views", "./views");
 app.set("layout", "layouts/default");
 app.use(express.static("public"));
 
-let mongoURL =
-  "mongodb+srv://arkarphyo:test1234@cluster0.44naqvx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+// let mongoURL =
+//   "mongodb+srv://arkarphyo:test1234@cluster0.44naqvx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-mongoose
-  .connect(mongoURL)
-  .then(() => {
-    console.log("DB is connected");
-    serverStart();
-  })
-  .catch((err) => {
-    console.error("MongoDB connection error:", err);
-  });
+// mongoose
+//   .connect(mongoURL, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// })
+// .then(() => {
+//   console.log("DB is connected");
+// })
+// .catch((err) => {
+//   console.error("MongoDB connection error:", err);
+// });
 
+serverStart();
 function serverStart() {
   app
-    .listen(port, () => {
-      console.log(`Server started on port ${port}`);
-    })
-    .on("error", (err) => {
-      console.error("Server error:", err);
+  .listen(port, () => {
+    console.log(`Server started on port ${port}`);
+  })
+  .on("error", (err) => {
+    console.error("Server error:", err);
     });
 }
 
