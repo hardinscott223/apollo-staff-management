@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap");
 :root {
   --background-color: linear-gradient(
     111.84deg,
@@ -7,8 +8,13 @@
   --font-color: white;
   --card-color: #171923;
   --footer-color: #777;
+  --btn-color: #582cff;
 }
 
+/* Element  */
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+}
 /* Element  */
 * {
   margin: 0;
@@ -102,14 +108,14 @@ ul li {
   justify-content: end;
 }
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 20px;
 }
 
-.topNavbar{
+.topNavbar {
   background-color: var(--background-color);
   border: 2px solid var(--card-color);
   border-radius: 20px;
@@ -119,7 +125,7 @@ ul li {
 
 .btn {
   width: 80px;
-  background-color: #434040;
+  background-color: var(--btn-color);
   height: 40px;
   padding: 10px 0px;
   vertical-align: middle;
