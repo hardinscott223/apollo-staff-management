@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Share+Tech&display=swap"); */
 :root {
   --background-color: linear-gradient(
     111.84deg,
@@ -13,7 +15,11 @@
 
 /* Element  */
 body {
-  font-family: "Montserrat Alternates", sans-serif;
+  /* font-family: "Montserrat Alternates", sans-serif; */
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 /* Element  */
 * {
@@ -63,7 +69,8 @@ ul li {
 
 /* Body containter  */
 .container {
-  background-image: url("/assets/background-body.png");
+  /* background-image: url("/assets/background-body.png"); */
+  background-color: #171923;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
