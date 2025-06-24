@@ -21,10 +21,12 @@ const EmployeeSchema = mongoose.Schema(
     phone: {
       type: String,
       require: false,
+      min: 8,
     },
     address: {
       type: String,
       require: false,
+      maxlength: 200,
     },
   },
   { timestamp: true }

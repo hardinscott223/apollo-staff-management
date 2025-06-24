@@ -1,35 +1,25 @@
-<div class="header">
-  <h1>Your Employee list Here</h1>
-  <a href="/employee" class="btn">Back</a>
+<div class="form-container">
+  <div class="header">
+    <a href="/department" class="btn">Back</a>
+  </div>
+  <form action="" method="POST">
+    <div class="form-group">
+      <label for="department">Department Name</label>
+      <input
+        type="text"
+        id="department"
+        class="form-input"
+        placeholder="Enter department name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        class="form-input"
+        placeholder="Enter description"
+      ></textarea>
+    </div>
+    <a href="" class="btn">Register</a>
+  </form>
 </div>
-<form action="">
-  <div>
-    <label for="">Name</label>
-    <input type="text" />
-  </div>
-  <div>
-    <label for="">Surname</label>
-    <input type="text" />
-  </div>
-  <div>
-    <label for="">Department</label>
-    <select name="" id="">
-      <option value="">General Dentistry</option>
-      <option value="">Pediatric Dentistry</option>
-      <option value="">Restorative Dentistry</option>
-    </select>
-  </div>
-  <div>
-    <label for="">Email</label>
-    <input type="email" />
-  </div>
-  <div>
-    <label for="">Phone</label>
-    <input type="text" />
-  </div>
-  <div>
-    <label for="">Address</label>
-    <input type="text" />
-  </div>
-  <button type="submit">Register</button>
-</form>

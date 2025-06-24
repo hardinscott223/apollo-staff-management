@@ -1,15 +1,25 @@
-<div class="header">
-  <h1>Your Department list Here</h1>
-  <a href="/department" class="btn">Back</a>
+<div class="form-container">
+  <div class="header">
+    <a href="/department" class="btn">Back</a>
+  </div>
+  <form action="" method="POST">
+    <div class="form-group">
+      <label for="department">Department Name</label>
+      <input
+        type="text"
+        id="department"
+        class="form-input"
+        placeholder="Enter department name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        class="form-input"
+        placeholder="Enter description"
+      ></textarea>
+    </div>
+    <a href="" class="btn">Register</a>
+  </form>
 </div>
-<form action="" method="POST">
-  <div>
-    <label for="department">Department Name</label>
-    <input type="text" id="department" />
-  </div>
-  <div>
-    <label for="description">Description</label>
-    <textarea name="" id="description"></textarea>
-  </div>
-  <button type="submit">Register</button>
-</form>
